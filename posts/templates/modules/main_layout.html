@@ -1,0 +1,30 @@
+{% extends 'modules/base.html' %}
+
+{% block main %}
+
+{% block eyecatch %}
+{% endblock %}
+
+<div class="container mt-3">
+  <div class="row">
+    <!-- 左側のメインコンテンツ -->
+    <main class="col-12 col-md-8">
+      {% block content %}
+      {% endblock %}
+    </main><!-- メインコンテンツ終了 -->
+
+    <!-- 右側のサイドバー -->
+    <aside class="col-12 col-md-3 offset-md-1 mt-5">
+
+      {% block side_content %}
+      {% include 'modules/widget/self_introduce.html' %}
+      {% include 'modules/widget/tag_list.html' %}
+      {% endblock %}
+      <!-- 広告一覧 -->
+      {% for ad in ads %}
+        {{ ad.html | safe }}
+      {% endfor %}<!-- 広告一覧終了 -->
+    </aside><!-- /サイドバー終了 -->
+  </div><!-- /.row -->
+</div>
+{% endblock %}

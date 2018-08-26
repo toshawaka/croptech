@@ -1,0 +1,13 @@
+<div class="list-group mt-3">
+  <a href="#" class="list-group-item text-white bg-info">
+    Tag
+  </a>
+  {% for tag in tags  %}
+  <a style='font-size:85%' class="list-group-item" href="{% url 'tag' tag.name %}">
+      {{ tag.name }}<span class="badge badge-info badge-pill float-right text-white">{{ tag.num_posts }}</span>
+  </a>
+  {% endfor %}
+  <a style='font-size:85%' href="{% url 'tag_list' %}" class="list-group-item">
+    >>> All tags
+  </a>
+</div><!-- タグ一覧終了 -->

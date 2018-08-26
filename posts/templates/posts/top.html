@@ -1,0 +1,376 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>CROP X TECH</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="{% static 'css/mdb.min.css' %}" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="{% static 'css/style.min.css' %}" rel="stylesheet">
+
+    <style type="text/css">
+      @media (min-width: 800px) and (max-width: 850px) {
+              .navbar:not(.top-nav-collapse) {
+                  background: #1C2331!important;
+              }
+          }
+    </style>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <!-- ＃リンクのスムーズスクロール -->
+    <script>
+      $(function(){
+        // #で始まるリンクをクリックしたら実行されます
+        $('a[href^="#"]').click(function() {
+          // スクロールの速度
+          var speed = 1500; // ミリ秒で記述
+          var href= $(this).attr("href");
+          var target = $(href == "#" || href == "" ? 'html' : href);
+          var position = target.offset().top;
+          $('body,html').animate({scrollTop:position}, speed, 'swing');
+          return false;
+        });
+      });
+    </script>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+    <div class="container">
+
+      <!-- Brand -->
+      <a id="head" class="navbar-brand" href="{% url 'top' %}">
+        <strong>CROP X TECH</strong>
+      </a>
+
+      <!-- Collapse -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Links -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <!-- Left -->
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'top' %}">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'technote' %}">Technote</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">Dictionary</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">Reaserchers</a>
+          </li>
+        </ul>
+
+        <!-- Right -->
+        <ul class="navbar-nav nav-flex-icons">
+          <li class="nav-item">
+            <a href="https://twitter.com/cropxtech" class="nav-link" target="_blank">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link border border-light rounded">
+              <i class="fa fa-github mr-2"></i>CXT GitHub
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+  </nav>
+  <!-- Navbar -->
+
+  <!--Carousel Wrapper-->
+  <div id="carousel-example-1z" class="carousel slide carousel-fade" data-ride="carousel">
+
+    <!--Indicators-->
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-example-1z" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-1z" data-slide-to="1"></li>
+      <li data-target="#carousel-example-1z" data-slide-to="2"></li>
+    </ol>
+    <!--/.Indicators-->
+
+    <!--Slides-->
+    <div class="carousel-inner" role="listbox">
+
+      <!--First slide-->
+      <div class="carousel-item active">
+        <div class="view" style="background-image: url('{% static "img/kyoto.jpg" %}'); background-repeat: no-repeat; background-size: cover;">
+
+          <!-- Mask & flexbox options-->
+          <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+            <!-- Content -->
+            <div class="text-center white-text mx-5 wow fadeIn">
+              <h1 class="mb-4">
+                <strong>CROP X TECH</strong>
+              </h1>
+
+              <p>
+                <strong>農業研究のデジタルトランスフォーメーション</strong>
+              </p>
+              <a href="#about" class="btn btn-outline-white btn-lg">
+                About CROP X TECH
+                <i class="fa fa-graduation-cap ml-2"></i>
+              </a>
+            </div>
+            <!-- Content -->
+
+          </div>
+          <!-- Mask & flexbox options-->
+
+        </div>
+      </div>
+      <!--/First slide-->
+
+      <!--Second slide-->
+      <div class="carousel-item">
+        <div class="view" style="background-image: url('{% static "img/iwate.jpg" %}'); background-repeat: no-repeat; background-size: cover;">
+
+          <!-- Mask & flexbox options-->
+          <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+            <!-- Content -->
+            <div class="text-center white-text mx-5 wow fadeIn">
+              <h1 class="mb-4">
+                <strong>CROP X TECH</strong>
+              </h1>
+
+              <p>
+                <strong>農業研究のデジタルトランスフォーメーション</strong>
+              </p>
+              <a href="#about" class="btn btn-outline-white btn-lg">
+                About CROP X TECH
+                <i class="fa fa-graduation-cap ml-2"></i>
+              </a>
+            </div>
+            <!-- Content -->
+
+          </div>
+          <!-- Mask & flexbox options-->
+
+        </div>
+      </div>
+      <!--/Second slide-->
+
+      <!--Third slide-->
+      <div class="carousel-item">
+        <div class="view" style="background-image: url('{% static "img/tokachi.jpg" %}'); background-repeat: no-repeat; background-size: cover;">
+
+          <!-- Mask & flexbox options-->
+          <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+            <!-- Content -->
+            <div class="text-center white-text mx-5 wow fadeIn">
+              <h1 class="mb-4">
+                <strong>CROP X TECH</strong>
+              </h1>
+
+              <p>
+                <strong>農業研究のデジタルトランスフォーメーション</strong>
+              </p>
+              <a href="#about" class="btn btn-outline-white btn-lg">
+                About CROP X TECH
+                <i class="fa fa-graduation-cap ml-2"></i>
+              </a>
+            </div>
+            <!-- Content -->
+
+          </div>
+          <!-- Mask & flexbox options-->
+
+        </div>
+      </div>
+      <!--/Third slide-->
+
+    </div>
+    <!--/.Slides-->
+
+    <!--Controls-->
+    <a class="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carousel-example-1z" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+    <!--/.Controls-->
+
+  </div>
+  <!--/.Carousel Wrapper-->
+
+  <!--Main layout-->
+  <main>
+    <div class="container">
+
+      <!--Section: Main features & Quick Start-->
+      <section>
+        <p id="about" style="padding:50px; margin-top:-50px"></p>
+        <h3 class="h3 text-center my-5">Our Mission</h3>
+
+        <!--Grid row-->
+        <div class="row wow fadeIn">
+
+          <!--Grid column-->
+          <div class="col-md-12 px-4">
+
+            <!--First row-->
+            <div class="row">
+              <div class="col">
+                <p class="dark-grey-text" style="line-height: 210%;">
+                  AI/IoTという言葉が生まれ、農業分野でもIT技術の有用性が語られるようになりました。
+                  とはいえ、いまのところ「AIを使えばなにかできるのはないか」「とりあえずIoTだ」
+                  というように、農業現場の課題に対して専門的な視点を持って取り組めている企業や組織が少ないのが現状です。
+                  <br><br>
+                  一方で、古くから研究されている「農学」や「栽培学」という学問においては、多くの研究者たちが独自の仮説に基づいて
+                  実験と検証を繰り返し、作物生産性向上のための理論や知見を積み上げてきました。
+                  私たちが普段から食べている質の高いお米や野菜は、そのような研究に基づいた品種改良と栽培方法の最適化によって生み出されているのです。
+                  <br><br>
+                  しかしながら、その裏では研究者たちの膨大な労力と時間が費やされています。
+                  畑や田圃といった環境で、お米や野菜といった生き物を対象に行う研究は過酷極まりなく、
+                  大規模で、かつ持続的な研究を行っていくことは非常に困難なフィールドです。
+                  それでも、これからの農業研究の発展を目指すためには、この問題を確実に乗り越える必要があります。
+                  <br><br>
+                  私たちは、そのために不可欠なのは、最初に述べたAIやIoTといった最先端のIT技術だと確信してます。
+                  これらの技術は、知識さえあればもはや誰にでも利用できる形でインターネット上に散らばっています。
+                  私たちは、正しい知識と農業に対する課題意識をもった農学研究者たちが武器としてIT技術を活用し、
+                  これまでにない研究手法で世界の農業研究を加速していくことを望んでいます。
+                  また私たちは、より多くの人たちが農業研究に興味をもち、認知してくれるような世界を望んでいます。
+                  <br><br>
+                  その実現のために、私たちは、これまでにない農業研究のための情報サイトを提供します。
+
+
+                </p>
+              </div>
+            </div>
+        </div>
+        <!--/Grid row-->
+
+      </section>
+      <!--Section: Main features & Quick Start-->
+
+      <hr class="my-5">
+
+      <!--Section: Not enough-->
+      <section>
+
+        <h2 class="my-5 h3 text-center">What we offer</h2>
+
+        <div class="row features-small mb-5 mt-3 wow fadeIn">
+
+          <div class="col-md-12 px-4">
+
+          <!--First row-->
+          <!--First row-->
+          <div class="row mt-5">
+            <div class="col-lg-8">
+              <h5 class="feature-title font-bold mb-1"><b>TECH Note</b>　-IT技術ブログ-</h5>
+              <p class="dark-grey-text mt-2" style="line-height: 210%;">
+                AIやIoTを利用するに当たっては、プログラミングやネットワークの知識が不可欠になります。
+                これらの学習リソースはネット上に散らばっていますが、体系的にまとめられていない場合が多いほか、
+                専門用語が乱立していて初学者にはかなりハードルが高く感じられてしまいます。
+                そこで、初学者が最も理解しやすい形でプログラミングやネットワークの基礎情報を提供する技術ノートを作りました。
+                また、他産業で実際に利用され始めているサービスの事例をまとめているので、研究への導入も視野に入れることができます。
+              </p>
+            </div>
+            <div class="col-lg-4">
+              <img src="https://webdesign-trends.net/wp/wp-content/uploads/2016/09/online-programming-945x630.jpeg" class="img-fluid z-depth-1-half" alt="">
+            </div>
+          </div>
+          <!--Second row-->
+          <div class="row mt-5">
+            <div class="col-lg-8">
+              <h5 class="feature-title font-bold mb-1"><b>Researchers</b>　-研究者紹介-</h5>
+              <p class="dark-grey-text mt-2" style="line-height: 210%;">
+                農学研究とその成果は、もっと世に認知されるべきだと考えます。
+                そのために、農学研究の最先端を征く研究者たちをフィーチャーし、その研究内容を誰にでも伝わる形で発信できるプラットフォームを作りました。
+                世界中の人々が農学研究に触れる機会を提供するほか、研究者はお互いの興味や技術を発信できるため、共同研究の足がかりをつくることができます。
+              </p>
+            </div>
+            <div class="col-lg-4">
+            </div>
+          </div>
+          <!--Third row-->
+          <div class="row mt-5">
+            <div class="col-lg-8">
+              <h5 class="feature-title font-bold mb-1"><b>Dictionary</b>　-辞書-</h5>
+              <p class="dark-grey-text mt-2" style="line-height: 210%;">
+                このサイトでは、記事に出てくる専門用語をわざわざGoogleで検索する必要はありません。
+                すべての記事の専門用語にオリジナルの辞書へのリンクが貼られているので、
+                それを参照すれば解決できます。
+              </p>
+            </div>
+            <div class="col-lg-4">
+              <img src="https://d1f5hsy4d47upe.cloudfront.net/b8/b8229c967d61f30c78092e11a3b97700_t.jpeg" class="img-fluid z-depth-1-half" alt="">
+            </div>
+          </div>
+        </div>
+        </div>
+        <!--/First row-->
+
+      </section>
+      <!--Section: Not enough-->
+
+      <hr class="mb-5">
+
+
+    </div>
+  </main>
+  <!--Main layout-->
+
+  <!--Footer-->
+  <footer class="page-footer text-center font-small mt-4 wow fadeIn">
+
+    <!--Call to action-->
+    <!--/.Call to action-->
+
+    <!--Copyright-->
+    <div class="footer-copyright py-3">
+      <p>CROP X TECH</p>
+    </div>
+    <!--/.Copyright-->
+
+  </footer>
+  <!--/.Footer-->
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="{% static 'js/popper.min.js' %}"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="{% static 'js/mdb.min.js' %}"></script>
+      <!-- Initializations -->
+  <script type="text/javascript">
+    // Animations initialization
+    new WOW().init();
+  </script>
+</body>
+
+</html>

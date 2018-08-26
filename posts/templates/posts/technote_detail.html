@@ -1,0 +1,43 @@
+{% extends 'modules/main_layout.html' %}
+{% load static %}
+
+{% block title %}
+ {{ object.title }} - CROP X TEXH
+{% endblock %}
+
+{% block content %}
+<section>
+  <div class="container mt-3 mb-5">
+
+    <h2 class='font-weight-bold dark-grey-text mb-3' style="line-height:150%; font-weight:500">
+      {{ object.title }}
+    </h2>
+    <a href="{% url 'tag_list' %}"><i style='color:#000000' class="fa fa-tag mr-2"></i></a>
+    {% for tag in technote.tag.all %}
+    <span class="badge badge-dark mb-3 mr-2">
+      <a class="text-white" style='font-size:140%' href="{% url 'tag' tag.name %}">{{ tag.name }}</a>
+    </span>
+    {% endfor %}
+    <span class="mb-1 dark-grey-text float-right">
+      <i class="fa fa-calendar-check-o mr-2"></i>{{ object.created_at }}
+    </span><br>
+    <i class="fa fa-search mr-3 mb-3"></i>{{ object.key_words }}<br>
+
+    {% if object.thumbnail %}
+    <img class='img-fluid' src='{{ object.thumbnail.url }}'>
+    {% else %}
+    <img class='img-fluid' src='{% static "img/kyoto.jpg" %}'>
+    {% endif %}
+
+  </div>
+</section>
+
+
+
+
+<section>
+
+
+{{ object.content | safe}}
+{% endblock %}
+</section>
