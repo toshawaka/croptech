@@ -4,5 +4,4 @@ __pycache__
 settings_local.py
 settings_production.py
 migrations
-static
 media

@@ -2,19 +2,19 @@ import os
 from socket import gethostname
 
 if 'top' in gethostname():
-    from .settings_local import Valiables
+    from .settings_local import Variables
 else:
-    from .settings_production import Valiables
+    from .settings_production import Variables
 
-vals = Valiables()
+vars = Variables()
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-SECRET_KEY = vals.SECRET_KEY
+SECRET_KEY = vars.SECRET_KEY
 
-DEBUG = True
+DEBUG = vars.DEBUG
 
-ALLOWED_HOSTS = vals.ALLOWED_HOSTS
+ALLOWED_HOSTS = vars.ALLOWED_HOSTS
 
 # Application definition
 
