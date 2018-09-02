@@ -5,3 +5,4 @@ settings.py
 migrations
 media
 static
+ai_speaker
