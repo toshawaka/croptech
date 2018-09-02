@@ -2,8 +2,6 @@
 *.pyo
 __pycache__
 settings.py
-settings_local.py
-settings_production.py
 migrations
 media
 static
