@@ -1,4 +1,5 @@
 import os
+"""
 from socket import gethostname
 
 if 'top' in gethostname():
@@ -15,6 +16,17 @@ SECRET_KEY = vars.SECRET_KEY
 DEBUG = vars.DEBUG
 
 ALLOWED_HOSTS = vars.ALLOWED_HOSTS
+
+"""
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+SECRET_KEY = 'l(u!8smlknt((9-vg=++hc2u6%-*^&a+%k$j6r8*dhtf&(e9_e'
+
+DEBUG = True
+
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+
 
 # Application definition
 
@@ -60,7 +72,16 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'croptech.wsgi.application'
 
-DATABASES = vals.DATABASES
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'croptech',
+        'USER': 'croptech',
+        'PASSWORD': 'Love43nemies',
+        'HOST': '127.0.0.1',
+        'PORT': '',
+    }
+}
 
 
 
